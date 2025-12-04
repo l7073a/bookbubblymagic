@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbly Magic | Kids Party Entertainment in South Florida</title>
+    
+    <!-- Replace G-XXXXXXXXXX with your actual GA4 ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #2b4c7e;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        nav a:hover {
+            color: #e8a4b8;
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            background: #f5f0e8;
+        }
+        
+        .hero img.logo {
+            max-width: 350px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .hero h1 {
+            color: #2b4c7e;
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .hero p {
+            color: #555;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #2b4c7e;
+            color: white;
+            padding: 16px 40px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #1d3557;
+        }
+        
+        .cta-button.secondary {
+            background-color: #e8a4b8;
+            color: #2b4c7e;
+        }
+        
+        .cta-button.secondary:hover {
+            background-color: #d893a7;
+        }
+        
+        /* Meet George Section */
+        .meet-george {
+            background: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .meet-george img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e8a4b8;
+            margin-bottom: 20px;
+        }
+        
+        .meet-george h2 {
+            color: #2b4c7e;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        .meet-george p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: #555;
+            font-size: 16px;
+        }
+        
+        /* Packages Section */
+        .packages {
+            padding: 60px 20px;
+            background: #f5f0e8;
+        }
+        
+        .packages h2 {
+            text-align: center;
+            color: #2b4c7e;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .package-card.featured {
+            border: 3px solid #e8a4b8;
+            transform: scale(1.02);
+        }
+        
+        .package-card h3 {
+            color: #2b4c7e;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .package-card .price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #2b4c7e;
+            margin-bottom: 20px;
+        }
+        
+        .package-card ul {
+            list-style: none;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .package-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        
+        .package-card li:before {
+            content: "✓ ";
+            color: #e8a4b8;
+            font-weight: bold;
+        }
+        
+        .badge {
+            background: #e8a4b8;
+            color: #2b4c7e;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        
+        /* Services */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 30px 20px;
+            background: white;
+            flex-wrap: wrap;
+        }
+        
+        .service {
+            text-align: center;
+        }
+        
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        
+        .service h3 {
+            color: #2b4c7e;
+            font-size: 16px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2b4c7e;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        footer p {
+            margin-bottom: 10px;
+        }
+        
+        footer a {
+            color: #e8a4b8;
+            text-decoration: none;
+        }
+        
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 24px;
+            }
+            
+            .package-card.featured {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="parkland.html">Parkland & South FL</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <img src="logo.png" alt="Bubbly Magic - Magic, Bubbles, and Balloons" class="logo">
+        <h1>Unforgettable Kids Party Entertainment</h1>
+        <p>Magic shows, giant bubbles, and balloon art that will make your child's birthday the talk of the neighborhood!</p>
+        <a href="#contact" class="cta-button">Book Your Party</a>
+    </section>
+    
+    <section class="services">
+        <div class="service">
+            <div class="service-icon">✨</div>
+            <h3>Magic Shows</h3>
+        </div>
+        <div class="service">
+            <div class="service-icon">🫧</div>
+            <h3>Bubble Shows</h3>
+        </div>
+        <div class="service">
+            <div class="service-icon">🎈</div>
+            <h3>Balloon Art</h3>
+        </div>
+    </section>
+    
+    <section class="meet-george">
+        <img src="george.jpg" alt="George the Magician">
+        <h2>Meet George</h2>
+        <p>With over 20 years of experience entertaining children across South Florida, George brings joy, laughter, and wonder to every party. Kids love his interactive magic tricks, mesmerizing bubble shows, and incredible balloon creations!</p>
+    </section>
+    
+    <section class="packages" id="packages">
+        <h2>Party Packages</h2>
+        <div class="package-grid">
+            <div class="package-card">
+                <h3>Magic Party</h3>
+                <div class="price">$275</div>
+                <ul>
+                    <li>45-minute magic show</li>
+                    <li>Birthday child is the star</li>
+                    <li>Interactive tricks for all kids</li>
+                    <li>Perfect for ages 4-10</li>
+                    <li>Up to 20 children</li>
+                </ul>
+                <a href="#contact" class="cta-button secondary">Book Now</a>
+            </div>
+            
+            <div class="package-card featured">
+                <span class="badge">MOST POPULAR</span>
+                <h3>Ultimate Party</h3>
+                <div class="price">$375</div>
+                <ul>
+                    <li>45-minute magic show</li>
+                    <li>Giant bubble show</li>
+                    <li>Balloon animals for all kids</li>
+                    <li>Birthday child special gift</li>
+                    <li>Up to 25 children</li>
+                </ul>
+                <a href="#contact" class="cta-button">Book Now</a>
+            </div>
+            
+            <div class="package-card">
+                <h3>Bubble Blast</h3>
+                <div class="price">$225</div>
+                <ul>
+                    <li>30-minute bubble show</li>
+                    <li>Giant bubbles kids can touch</li>
+                    <li>Bubble wands for everyone</li>
+                    <li>Best for outdoor parties</li>
+                    <li>Up to 30 children</li>
+                </ul>
+                <a href="#contact" class="cta-button secondary">Book Now</a>
+            </div>
+        </div>
+    </section>
+    
+    <footer id="contact">
+        <h2 style="margin-bottom: 20px;">Book Your Party Today!</h2>
+        <p>📞 Call or Text: <a href="tel:5551234567">(555) 123-4567</a></p>
+        <p>📧 Email: <a href="mailto:book@bubblymagic.com">book@bubblymagic.com</a></p>
+        <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">Serving Parkland, Boca Raton, Coral Springs, Delray Beach, and all of South Florida</p>
+        <p style="margin-top: 30px; font-size: 12px; opacity: 0.6;">© 2025 Bubbly Magic. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Party Entertainment in Parkland & South Florida | Bubbly Magic</title>
+    
+    <!-- Replace G-XXXXXXXXXX with your actual GA4 ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f0e8;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background: #2b4c7e;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        nav a:hover {
+            color: #e8a4b8;
+        }
+        
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #2b4c7e 0%, #1d3557 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        .hero h1 span {
+            color: #e8a4b8;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #e8a4b8;
+            color: #2b4c7e;
+            padding: 16px 40px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #d893a7;
+        }
+        
+        .cta-button.secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            margin-left: 15px;
+        }
+        
+        .cta-button.secondary:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        /* Areas Section */
+        .areas-section {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .areas-section h2 {
+            text-align: center;
+            color: #2b4c7e;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .area-card {
+            background: #f5f0e8;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .area-card h3 {
+            color: #2b4c7e;
+            margin-bottom: 8px;
+        }
+        
+        .area-card p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Why Parkland Section */
+        .why-section {
+            padding: 60px 20px;
+            background: #f5f0e8;
+        }
+        
+        .why-section h2 {
+            text-align: center;
+            color: #2b4c7e;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+        
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .why-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .why-card h3 {
+            color: #2b4c7e;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        
+        .why-card p {
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .why-icon {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        
+        /* Local Content */
+        .local-section {
+            padding: 60px 20px;
+            background: white;
+            text-align: center;
+        }
+        
+        .local-section h2 {
+            color: #2b4c7e;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        
+        .local-section p {
+            max-width: 700px;
+            margin: 0 auto 20px;
+            color: #555;
+            font-size: 16px;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #2b4c7e;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .cta-section p {
+            margin-bottom: 30px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            background: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        footer a {
+            color: #e8a4b8;
+            text-decoration: none;
+        }
+        
+        /* Mobile */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .cta-button.secondary {
+                margin-left: 0;
+                margin-top: 15px;
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="parkland.html">Parkland & South FL</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <section class="hero">
+        <h1>Kids Party Entertainment in <span>Parkland</span> & South Florida</h1>
+        <p>Bringing magic, bubbles, and balloon art to birthday parties, schools, and events throughout Broward and Palm Beach counties!</p>
+        <a href="index.html#contact" class="cta-button">Book Your Parkland Party</a>
+        <a href="index.html#packages" class="cta-button secondary">View Packages</a>
+    </section>
+    
+    <section class="areas-section">
+        <h2>Areas We Serve</h2>
+        <div class="areas-grid">
+            <div class="area-card">
+                <h3>📍 Parkland</h3>
+                <p>Our home base!</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 Coral Springs</h3>
+                <p>10 min away</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 Boca Raton</h3>
+                <p>15 min away</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 Coconut Creek</h3>
+                <p>10 min away</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 Delray Beach</h3>
+                <p>25 min away</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 West Palm Beach</h3>
+                <p>35 min away</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 Fort Lauderdale</h3>
+                <p>30 min away</p>
+            </div>
+            <div class="area-card">
+                <h3>📍 Weston</h3>
+                <p>20 min away</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="why-section">
+        <h2>Why Parkland Families Choose Us</h2>
+        <div class="why-grid">
+            <div class="why-card">
+                <div class="why-icon">🏠</div>
+                <h3>We're Local</h3>
+                <p>Based right here in South Florida, we know the community. No long travel fees, quick response times, and we're always nearby if you have questions.</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">⭐</div>
+                <h3>500+ Happy Families</h3>
+                <p>We've entertained at hundreds of Parkland birthday parties, school events, and community gatherings. Check out our 5-star reviews!</p>
+            </div>
+            <div class="why-card">
+                <div class="why-icon">🌴</div>
+                <h3>Perfect for Florida Weather</h3>
+                <p>Our outdoor bubble shows are designed for South Florida's climate. We know how to make the magic happen rain or shine!</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="local-section">
+        <h2>Popular Party Venues in Parkland</h2>
+        <p>We've performed at backyard parties throughout Parkland, as well as local venues like Terramar Park, Pine Trails Park, and the Parkland Recreation Center. Whether you're hosting at home or at a venue, we bring everything needed for an amazing show!</p>
+        <p>We also work with local schools, daycares, and summer camps throughout Broward County. Ask about our special rates for educational events and multi-show bookings.</p>
+    </section>
+    
+    <section class="cta-section">
+        <h2>Book Your Parkland Party Today!</h2>
+        <p>Same-week availability often possible for local Parkland families</p>
+        <a href="index.html#contact" class="cta-button">Get in Touch</a>
+    </section>
+    
+    <footer>
+        <p>📞 <a href="tel:5551234567">(555) 123-4567</a> | 📧 <a href="mailto:book@bubblymagic.com">book@bubblymagic.com</a></p>
+        <p style="margin-top: 10px; opacity: 0.8;">Proudly serving Parkland, Coral Springs, Boca Raton, and all of South Florida</p>
+        <p style="margin-top: 15px; font-size: 12px; opacity: 0.6;">© 2025 Bubbly Magic. All rights reserved.</p>
+    </footer>
+</body>
+</html>
