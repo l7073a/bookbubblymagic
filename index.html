@@ -65,7 +65,7 @@
         }
 
         .hamburger {
-            display: flex;
+            display: none;
             flex-direction: column;
             cursor: pointer;
             gap: 5px;
@@ -95,32 +95,21 @@
 
         nav ul {
             list-style: none;
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 280px;
-            height: 100vh;
-            background: #2b4c7e;
-            flex-direction: column;
-            padding: 100px 40px 40px;
+            display: flex;
+            gap: 30px;
             margin: 0;
-            transition: right 0.3s ease;
-            box-shadow: -5px 0 20px rgba(0,0,0,0.2);
-        }
-
-        nav ul.active {
-            right: 0;
+            align-items: center;
         }
 
         nav ul li {
-            margin-bottom: 25px;
+            margin: 0;
         }
 
         nav a {
-            color: white;
+            color: #2b4c7e;
             text-decoration: none;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 15px;
             transition: color 0.3s ease;
             display: inline-block;
         }
@@ -522,6 +511,41 @@
 
             .nav-title {
                 font-size: 24px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: #2b4c7e;
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+                gap: 0;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav ul li {
+                margin-bottom: 25px;
+            }
+
+            nav ul a {
+                color: white;
+                font-size: 18px;
+            }
+
+            nav ul a:hover {
+                color: #e8a4b8;
             }
 
             .hero {
