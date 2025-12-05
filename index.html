@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bubbly Magic | Kids Party Entertainment in South Florida</title>
-    
-    <!-- Replace G-WTQMGDCMPM with your actual GA4 ID -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WTQMGDCMPM"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -13,7 +12,7 @@
         gtag('js', new Date());
         gtag('config', 'G-WTQMGDCMPM');
     </script>
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -31,24 +30,35 @@
             color: #333;
             line-height: 1.6;
         }
-        
+
         /* Navigation */
         nav {
             background: #2b4c7e;
-            padding: 15px 20px;
+            padding: 12px 20px;
             position: sticky;
             top: 0;
             z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
-        
+
+        .nav-logo {
+            height: 45px;
+            width: auto;
+        }
+
         nav ul {
             list-style: none;
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 25px;
             flex-wrap: wrap;
+            margin: 0;
         }
-        
+
         nav a {
             color: white;
             text-decoration: none;
@@ -62,63 +72,153 @@
             color: #e8a4b8;
             transform: translateY(-2px);
         }
-        
+
         /* Hero Section */
         .hero {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 50px 20px;
-            background: #f5f0e8;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(43, 76, 126, 0.7), rgba(29, 53, 87, 0.8)), url('hero.jpg');
+            background-size: cover;
+            background-position: center;
         }
-        
-        .hero img.logo {
-            max-width: 350px;
-            width: 100%;
-            margin-bottom: 20px;
+
+        .hero-content {
+            max-width: 800px;
+            color: white;
         }
-        
+
         .hero h1 {
-            color: #2b4c7e;
-            font-size: 32px;
+            font-size: 48px;
             font-weight: 800;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero p {
-            color: #555;
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 30px;
-            line-height: 1.7;
+            font-size: 22px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+            line-height: 1.6;
         }
-        
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
         .cta-button {
             display: inline-block;
-            background: linear-gradient(135deg, #2b4c7e 0%, #1d3557 100%);
-            color: white;
-            padding: 16px 40px;
-            font-size: 18px;
-            font-weight: 700;
+            background: linear-gradient(135deg, #e8a4b8 0%, #d893a7 100%);
+            color: #2b4c7e;
+            padding: 18px 45px;
+            font-size: 20px;
+            font-weight: 800;
             text-decoration: none;
             border-radius: 30px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 15px rgba(43, 76, 126, 0.3);
+            box-shadow: 0 4px 15px rgba(232, 164, 184, 0.4);
         }
 
         .cta-button:hover {
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(43, 76, 126, 0.4);
+            box-shadow: 0 6px 25px rgba(232, 164, 184, 0.5);
         }
 
         .cta-button.secondary {
-            background: linear-gradient(135deg, #e8a4b8 0%, #d893a7 100%);
-            color: #2b4c7e;
-            box-shadow: 0 4px 15px rgba(232, 164, 184, 0.3);
+            background: transparent;
+            border: 3px solid white;
+            color: white;
+            box-shadow: none;
         }
 
         .cta-button.secondary:hover {
-            box-shadow: 0 6px 20px rgba(232, 164, 184, 0.4);
+            background: rgba(255,255,255,0.1);
+            box-shadow: 0 4px 15px rgba(255,255,255,0.2);
         }
-        
+
+        /* Social Proof Bar */
+        .social-proof {
+            background: white;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+
+        .social-proof-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .proof-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .proof-item .stars {
+            color: #f4c542;
+            font-size: 20px;
+        }
+
+        .proof-item span {
+            color: #555;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .proof-item strong {
+            color: #2b4c7e;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 50px 20px;
+            background: #f5f0e8;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            text-align: center;
+            padding: 25px 35px;
+            background: white;
+            border-radius: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            font-size: 50px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .service h3 {
+            color: #2b4c7e;
+            font-size: 18px;
+            font-weight: 700;
+        }
+
         /* Meet George Section */
         .meet-george {
             background: white;
@@ -156,21 +256,28 @@
             font-size: 17px;
             line-height: 1.8;
         }
-        
+
         /* Packages Section */
         .packages {
-            padding: 60px 20px;
+            padding: 70px 20px;
             background: #f5f0e8;
         }
-        
+
         .packages h2 {
             text-align: center;
             color: #2b4c7e;
-            font-size: 32px;
+            font-size: 36px;
             font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .packages-subtitle {
+            text-align: center;
+            color: #555;
+            font-size: 18px;
             margin-bottom: 40px;
         }
-        
+
         .package-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -178,7 +285,7 @@
             max-width: 1000px;
             margin: 0 auto;
         }
-        
+
         .package-card {
             background: white;
             border-radius: 20px;
@@ -203,38 +310,38 @@
             transform: scale(1.02) translateY(-5px);
             box-shadow: 0 12px 40px rgba(232, 164, 184, 0.3);
         }
-        
+
         .package-card h3 {
             color: #2b4c7e;
             font-size: 24px;
             margin-bottom: 10px;
         }
-        
+
         .package-card .price {
             font-size: 36px;
             font-weight: bold;
             color: #2b4c7e;
             margin-bottom: 20px;
         }
-        
+
         .package-card ul {
             list-style: none;
             margin-bottom: 25px;
             text-align: left;
         }
-        
+
         .package-card li {
             padding: 8px 0;
             border-bottom: 1px solid #eee;
             color: #555;
         }
-        
+
         .package-card li:before {
             content: "✓ ";
             color: #e8a4b8;
             font-weight: bold;
         }
-        
+
         .badge {
             background: #e8a4b8;
             color: #2b4c7e;
@@ -245,52 +352,66 @@
             display: inline-block;
             margin-bottom: 15px;
         }
-        
-        /* Services */
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            padding: 40px 20px;
-            background: white;
-            flex-wrap: wrap;
-        }
 
-        .service {
-            text-align: center;
-            padding: 20px 30px;
-            border-radius: 15px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: default;
-        }
-
-        .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            font-size: 50px;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .service h3 {
-            color: #2b4c7e;
-            font-size: 18px;
+        .package-cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #2b4c7e 0%, #1d3557 100%);
+            color: white;
+            padding: 14px 35px;
+            font-size: 16px;
             font-weight: 700;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(43, 76, 126, 0.3);
         }
-        
-        /* Footer */
-        footer {
+
+        .package-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(43, 76, 126, 0.4);
+        }
+
+        .package-cta.secondary {
+            background: linear-gradient(135deg, #e8a4b8 0%, #d893a7 100%);
+            color: #2b4c7e;
+            box-shadow: 0 4px 15px rgba(232, 164, 184, 0.3);
+        }
+
+        .package-cta.secondary:hover {
+            box-shadow: 0 6px 20px rgba(232, 164, 184, 0.4);
+        }
+
+        /* Final CTA Section */
+        .final-cta {
             background: linear-gradient(135deg, #2b4c7e 0%, #1d3557 100%);
             color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 70px 20px;
         }
 
-        footer h2 {
+        .final-cta h2 {
+            font-size: 36px;
             font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .final-cta .cta-button {
+            background: linear-gradient(135deg, #e8a4b8 0%, #d893a7 100%);
+            color: #2b4c7e;
+        }
+
+        /* Footer */
+        footer {
+            background: #1d3557;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
         }
 
         footer p {
@@ -337,23 +458,60 @@
         }
 
         /* Mobile */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            nav {
+                justify-content: center;
+            }
+
+            .nav-logo {
+                height: 40px;
+            }
+
             nav ul {
                 gap: 15px;
             }
-            
-            .hero h1 {
-                font-size: 24px;
+
+            .hero {
+                min-height: 450px;
+                padding: 40px 20px;
             }
-            
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .cta-button {
+                padding: 15px 35px;
+                font-size: 18px;
+            }
+
+            .social-proof-inner {
+                gap: 20px;
+            }
+
+            .proof-item span {
+                font-size: 14px;
+            }
+
             .package-card.featured {
                 transform: none;
+            }
+
+            .packages h2, .final-cta h2 {
+                font-size: 28px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
+        <a href="index.html">
+            <img src="logo.png" alt="Bubbly Magic" class="nav-logo">
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="reviews.html">Reviews</a></li>
@@ -362,14 +520,33 @@
             <li><a href="book.html">Book Now</a></li>
         </ul>
     </nav>
-    
+
     <section class="hero">
-        <img src="logo.png" alt="Bubbly Magic - Magic, Bubbles, and Balloons" class="logo">
-        <h1>Unforgettable Kids Party Entertainment</h1>
-        <p>Magic shows, giant bubbles, and balloon art that will make your child's birthday the talk of the neighborhood!</p>
-        <a href="book.html" class="cta-button">Book Your Party</a>
+        <div class="hero-content">
+            <h1>Unforgettable Kids Party Entertainment</h1>
+            <p>Magic shows, giant bubbles, and balloon art that will make your child's birthday the talk of the neighborhood!</p>
+            <div class="hero-cta">
+                <a href="book.html" class="cta-button">Book Your Party</a>
+                <a href="#packages" class="cta-button secondary">View Packages</a>
+            </div>
+        </div>
     </section>
-    
+
+    <section class="social-proof">
+        <div class="social-proof-inner">
+            <div class="proof-item">
+                <span class="stars">★★★★★</span>
+                <span><strong>500+</strong> Happy Families</span>
+            </div>
+            <div class="proof-item">
+                <span><strong>20+</strong> Years Experience</span>
+            </div>
+            <div class="proof-item">
+                <span>Serving <strong>All of South Florida</strong></span>
+            </div>
+        </div>
+    </section>
+
     <section class="services">
         <div class="service">
             <div class="service-icon">✨</div>
@@ -384,15 +561,16 @@
             <h3>Balloon Art</h3>
         </div>
     </section>
-    
+
     <section class="meet-george">
         <img src="george.jpg" alt="George the Magician">
         <h2>Meet George</h2>
         <p>With over 20 years of experience entertaining children across South Florida, George brings joy, laughter, and wonder to every party. Kids love his interactive magic tricks, mesmerizing bubble shows, and incredible balloon creations!</p>
     </section>
-    
+
     <section class="packages" id="packages">
         <h2>Party Packages</h2>
+        <p class="packages-subtitle">Choose the perfect entertainment for your celebration</p>
         <div class="package-grid">
             <div class="package-card">
                 <h3>Magic Party</h3>
@@ -404,9 +582,9 @@
                     <li>Perfect for ages 4-10</li>
                     <li>Up to 20 children</li>
                 </ul>
-                <a href="book.html" class="cta-button secondary">Book Now</a>
+                <a href="book.html" class="package-cta secondary">Book Now</a>
             </div>
-            
+
             <div class="package-card featured">
                 <span class="badge">MOST POPULAR</span>
                 <h3>Ultimate Party</h3>
@@ -418,9 +596,9 @@
                     <li>Birthday child special gift</li>
                     <li>Up to 25 children</li>
                 </ul>
-                <a href="book.html" class="cta-button">Book Now</a>
+                <a href="book.html" class="package-cta">Book Now</a>
             </div>
-            
+
             <div class="package-card">
                 <h3>Bubble Blast</h3>
                 <div class="price">$225</div>
@@ -431,13 +609,18 @@
                     <li>Best for outdoor parties</li>
                     <li>Up to 30 children</li>
                 </ul>
-                <a href="book.html" class="cta-button secondary">Book Now</a>
+                <a href="book.html" class="package-cta secondary">Book Now</a>
             </div>
         </div>
     </section>
-    
-    <footer id="contact">
-        <h2 style="margin-bottom: 20px;">Book Your Party Today!</h2>
+
+    <section class="final-cta">
+        <h2>Ready to Create Magical Memories?</h2>
+        <p>Book now and give your child the party they'll never forget!</p>
+        <a href="book.html" class="cta-button">Book Your Party Today</a>
+    </section>
+
+    <footer>
         <p>📞 Call or Text: <a href="tel:6099020334">(609) 902-0334</a></p>
         <p>📧 Email: <a href="mailto:david@bookbubblymagic.com">david@bookbubblymagic.com</a></p>
         <a href="https://instagram.com/bubblymagicsofl" target="_blank" rel="noopener noreferrer" class="instagram-link">
@@ -445,7 +628,7 @@
             @bubblymagicsofl
         </a>
         <p style="margin-top: 20px; font-size: 14px; opacity: 0.8;">Serving Parkland, Boca Raton, Coral Springs, Delray Beach, and all of South Florida</p>
-        <p style="margin-top: 30px; font-size: 12px; opacity: 0.6;">© 2025 Bubbly Magic. All rights reserved.</p>
+        <p style="margin-top: 20px; font-size: 12px; opacity: 0.6;">© 2025 Bubbly Magic. All rights reserved.</p>
     </footer>
 </body>
 </html>
