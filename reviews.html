@@ -118,7 +118,41 @@
             font-size: 14px;
             font-style: normal;
         }
-        
+
+        /* Video Review */
+        .video-review {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .video-review h3 {
+            color: #2b4c7e;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .video-review video {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-review .author {
+            color: #2b4c7e;
+            font-weight: bold;
+            margin-top: 15px;
+            display: block;
+        }
+
+        .video-review .location {
+            color: #888;
+            font-size: 14px;
+        }
+
         /* CTA Section */
         .cta-section {
             background: #2b4c7e;
@@ -197,6 +231,17 @@
     </section>
     
     <section class="reviews-section">
+        <div class="video-review">
+            <h3>Watch What Parents Are Saying</h3>
+            <video controls playsinline preload="metadata">
+                <source src="jason_k_review.MOV" type="video/quicktime">
+                <source src="jason_k_review.MOV" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <span class="author">— Jason K.</span>
+            <span class="location">South Florida</span>
+        </div>
+
         <div class="review-card">
             <div class="stars">★★★★★</div>
             <p>"George was absolutely AMAZING! He kept 25 kids completely mesmerized for over an hour. My daughter is still talking about how she got to be the magician's assistant. Best birthday party we've ever had!"</p>
