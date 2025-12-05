@@ -34,43 +34,98 @@
         /* Navigation */
         nav {
             background: #2b4c7e;
-            padding: 12px 20px;
+            padding: 15px 20px;
             position: sticky;
             top: 0;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
         }
 
         .nav-logo {
-            height: 45px;
+            height: 60px;
             width: auto;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 10px;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: white;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
         }
 
         nav ul {
             list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 280px;
+            height: 100vh;
+            background: #2b4c7e;
+            flex-direction: column;
+            padding: 100px 40px 40px;
             margin: 0;
+            transition: right 0.3s ease;
+            box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+        }
+
+        nav ul.active {
+            right: 0;
+        }
+
+        nav ul li {
+            margin-bottom: 25px;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: 700;
-            font-size: 14px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 18px;
+            transition: color 0.3s ease;
             display: inline-block;
         }
 
         nav a:hover {
             color: #e8a4b8;
-            transform: translateY(-2px);
+        }
+
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 99;
+        }
+
+        .nav-overlay.active {
+            display: block;
         }
 
         /* Hero Section */
@@ -459,16 +514,8 @@
 
         /* Mobile */
         @media (max-width: 768px) {
-            nav {
-                justify-content: center;
-            }
-
             .nav-logo {
-                height: 40px;
-            }
-
-            nav ul {
-                gap: 15px;
+                height: 50px;
             }
 
             .hero {
@@ -508,18 +555,32 @@
     </style>
 </head>
 <body>
+    <div class="nav-overlay" onclick="toggleMenu()"></div>
     <nav>
         <a href="index.html">
             <img src="logo.png" alt="Bubbly Magic" class="nav-logo">
         </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="parkland.html">Parkland & South FL</a></li>
-            <li><a href="#packages">Packages</a></li>
-            <li><a href="book.html">Book Now</a></li>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="reviews.html" onclick="toggleMenu()">Reviews</a></li>
+            <li><a href="parkland.html" onclick="toggleMenu()">Parkland & South FL</a></li>
+            <li><a href="#packages" onclick="toggleMenu()">Packages</a></li>
+            <li><a href="book.html" onclick="toggleMenu()">Book Now</a></li>
         </ul>
     </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.querySelector('nav ul').classList.toggle('active');
+            document.querySelector('.nav-overlay').classList.toggle('active');
+        }
+    </script>
 
     <section class="hero">
         <div class="hero-content">
