@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -34,7 +34,7 @@
         /* Navigation */
         nav {
             background: #F3E5D0;
-            padding: 15px 20px;
+            padding: 0 20px;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -44,9 +44,24 @@
             height: 110px;
         }
 
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+
         .nav-logo {
-            height: 95px;
+            height: 110px;
             width: auto;
+        }
+
+        .nav-title {
+            font-family: 'Baloo 2', cursive;
+            font-size: 32px;
+            font-weight: 800;
+            color: #2b4c7e;
+            line-height: 1.1;
         }
 
         .hamburger {
@@ -136,26 +151,45 @@
             background: url('hero.jpg');
             background-size: cover;
             background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 40px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+        }
+
+        .hero h1 {
+            position: relative;
+            z-index: 1;
+            color: white;
+            font-size: 48px;
+            font-weight: 800;
+            text-align: center;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            max-width: 800px;
+            padding: 0 20px;
         }
 
         /* CTA Section below social proof */
         .cta-section {
             background: #2b4c7e;
-            padding: 50px 20px;
+            padding: 40px 20px;
             text-align: center;
-        }
-
-        .cta-section h1 {
-            color: white;
-            font-size: 42px;
-            font-weight: 800;
-            margin-bottom: 15px;
         }
 
         .cta-section p {
             color: white;
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             opacity: 0.95;
             max-width: 650px;
             margin-left: auto;
@@ -478,21 +512,25 @@
 
         /* Mobile */
         @media (max-width: 768px) {
+            nav {
+                height: 80px;
+            }
+
             .nav-logo {
-                height: 50px;
+                height: 80px;
+            }
+
+            .nav-title {
+                font-size: 24px;
             }
 
             .hero {
-                min-height: 450px;
-                padding: 40px 20px;
+                min-height: 350px;
+                padding-bottom: 30px;
             }
 
             .hero h1 {
                 font-size: 32px;
-            }
-
-            .hero p {
-                font-size: 18px;
             }
 
             .cta-button {
@@ -516,13 +554,28 @@
                 font-size: 28px;
             }
         }
+
+        @media (max-width: 500px) {
+            .nav-title {
+                display: none;
+            }
+
+            nav {
+                height: 90px;
+            }
+
+            .nav-logo {
+                height: 90px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="nav-overlay" onclick="toggleMenu()"></div>
     <nav>
-        <a href="index.html">
+        <a href="index.html" class="nav-brand">
             <img src="logo.png" alt="Bubbly Magic" class="nav-logo">
+            <span class="nav-title">Bubbly Magic</span>
         </a>
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
@@ -546,7 +599,9 @@
         }
     </script>
 
-    <section class="hero"></section>
+    <section class="hero">
+        <h1>Unforgettable Kids Party Entertainment</h1>
+    </section>
 
     <section class="social-proof">
         <div class="social-proof-inner">
@@ -564,7 +619,6 @@
     </section>
 
     <section class="cta-section">
-        <h1>Unforgettable Kids Party Entertainment</h1>
         <p>Magic shows, giant bubbles, and balloon art that will make your child's birthday the talk of the neighborhood!</p>
         <div class="hero-cta">
             <a href="book.html" class="cta-button">Book Your Party</a>
