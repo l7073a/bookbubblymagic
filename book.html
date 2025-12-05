@@ -15,7 +15,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@700;800&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -33,33 +33,95 @@
 
         /* Navigation */
         nav {
-            background: #2b4c7e;
-            padding: 15px 20px;
+            background: #ECDFC8;
+            padding: 0 20px;
             position: sticky;
             top: 0;
             z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 130px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .nav-logo {
+            height: 120px;
+            width: auto;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 10px;
+            z-index: 101;
+        }
+
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #2b4c7e;
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
             gap: 30px;
-            flex-wrap: wrap;
+            margin: 0;
+            align-items: center;
+        }
+
+        nav ul li {
+            margin: 0;
         }
 
         nav a {
-            color: white;
+            color: #2b4c7e;
             text-decoration: none;
             font-weight: 700;
-            font-size: 14px;
-            transition: color 0.3s ease, transform 0.3s ease;
+            font-size: 15px;
+            transition: color 0.3s ease;
             display: inline-block;
         }
 
         nav a:hover {
             color: #e8a4b8;
-            transform: translateY(-2px);
+        }
+
+        .nav-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 99;
+        }
+
+        .nav-overlay.active {
+            display: block;
         }
 
         /* Page Header */
@@ -156,9 +218,48 @@
         }
 
         /* Mobile */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
+            nav {
+                height: 100px;
+            }
+
+            .nav-logo {
+                height: 90px;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
             nav ul {
-                gap: 15px;
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background: #2b4c7e;
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                transition: right 0.3s ease;
+                box-shadow: -5px 0 20px rgba(0,0,0,0.2);
+                gap: 0;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav ul li {
+                margin-bottom: 25px;
+            }
+
+            nav ul a {
+                color: white;
+                font-size: 18px;
+            }
+
+            nav ul a:hover {
+                color: #e8a4b8;
             }
 
             .page-header h1 {
@@ -169,18 +270,45 @@
                 padding: 15px;
             }
         }
+
+        @media (max-width: 500px) {
+            nav {
+                height: 80px;
+            }
+
+            .nav-logo {
+                height: 70px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="nav-overlay" onclick="toggleMenu()"></div>
     <nav>
+        <a href="index.html" class="nav-brand">
+            <img src="logo-horizontal.jpg" alt="Bubbly Magic - Magic, Bubbles, and Balloons" class="nav-logo">
+        </a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="reviews.html">Reviews</a></li>
-            <li><a href="parkland.html">Parkland & South FL</a></li>
-            <li><a href="index.html#packages">Packages</a></li>
-            <li><a href="book.html">Book Now</a></li>
+            <li><a href="index.html" onclick="toggleMenu()">Home</a></li>
+            <li><a href="reviews.html" onclick="toggleMenu()">Reviews</a></li>
+            <li><a href="parkland.html" onclick="toggleMenu()">Parkland & South FL</a></li>
+            <li><a href="index.html#packages" onclick="toggleMenu()">Packages</a></li>
+            <li><a href="book.html" onclick="toggleMenu()">Book Now</a></li>
         </ul>
     </nav>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.hamburger').classList.toggle('active');
+            document.querySelector('nav ul').classList.toggle('active');
+            document.querySelector('.nav-overlay').classList.toggle('active');
+        }
+    </script>
 
     <section class="page-header">
         <h1>Book Your Party</h1>
