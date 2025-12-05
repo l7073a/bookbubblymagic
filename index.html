@@ -14,15 +14,19 @@
         gtag('config', 'G-XXXXXXXXXX');
     </script>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Nunito', Arial, sans-serif;
             background-color: #f5f0e8;
             color: #333;
             line-height: 1.6;
@@ -48,12 +52,15 @@
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             font-size: 14px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
         }
-        
+
         nav a:hover {
             color: #e8a4b8;
+            transform: translateY(-2px);
         }
         
         /* Hero Section */
@@ -71,68 +78,83 @@
         
         .hero h1 {
             color: #2b4c7e;
-            font-size: 28px;
+            font-size: 32px;
+            font-weight: 800;
             margin-bottom: 15px;
         }
-        
+
         .hero p {
             color: #555;
             font-size: 18px;
             max-width: 600px;
             margin: 0 auto 30px;
+            line-height: 1.7;
         }
         
         .cta-button {
             display: inline-block;
-            background-color: #2b4c7e;
+            background: linear-gradient(135deg, #2b4c7e 0%, #1d3557 100%);
             color: white;
             padding: 16px 40px;
             font-size: 18px;
+            font-weight: 700;
             text-decoration: none;
             border-radius: 30px;
-            transition: background-color 0.3s;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(43, 76, 126, 0.3);
         }
-        
+
         .cta-button:hover {
-            background-color: #1d3557;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(43, 76, 126, 0.4);
         }
-        
+
         .cta-button.secondary {
-            background-color: #e8a4b8;
+            background: linear-gradient(135deg, #e8a4b8 0%, #d893a7 100%);
             color: #2b4c7e;
+            box-shadow: 0 4px 15px rgba(232, 164, 184, 0.3);
         }
-        
+
         .cta-button.secondary:hover {
-            background-color: #d893a7;
+            box-shadow: 0 6px 20px rgba(232, 164, 184, 0.4);
         }
         
         /* Meet George Section */
         .meet-george {
             background: white;
-            padding: 60px 20px;
+            padding: 70px 20px;
             text-align: center;
         }
-        
+
         .meet-george img {
-            width: 200px;
-            height: 200px;
+            width: 220px;
+            height: 220px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid #e8a4b8;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 30px rgba(232, 164, 184, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
+        .meet-george img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 40px rgba(232, 164, 184, 0.4);
+        }
+
         .meet-george h2 {
             color: #2b4c7e;
             font-size: 32px;
+            font-weight: 800;
             margin-bottom: 15px;
         }
-        
+
         .meet-george p {
             max-width: 600px;
             margin: 0 auto;
             color: #555;
-            font-size: 16px;
+            font-size: 17px;
+            line-height: 1.8;
         }
         
         /* Packages Section */
@@ -145,6 +167,7 @@
             text-align: center;
             color: #2b4c7e;
             font-size: 32px;
+            font-weight: 800;
             margin-bottom: 40px;
         }
         
@@ -161,12 +184,24 @@
             border-radius: 20px;
             padding: 30px;
             text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
         .package-card.featured {
             border: 3px solid #e8a4b8;
             transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(232, 164, 184, 0.25);
+        }
+
+        .package-card.featured:hover {
+            transform: scale(1.02) translateY(-5px);
+            box-shadow: 0 12px 40px rgba(232, 164, 184, 0.3);
         }
         
         .package-card h3 {
@@ -215,41 +250,61 @@
         .services {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            padding: 30px 20px;
+            gap: 50px;
+            padding: 40px 20px;
             background: white;
             flex-wrap: wrap;
         }
-        
+
         .service {
             text-align: center;
+            padding: 20px 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: default;
         }
-        
+
+        .service:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
         .service-icon {
-            font-size: 40px;
-            margin-bottom: 10px;
+            font-size: 50px;
+            margin-bottom: 12px;
+            display: block;
         }
-        
+
         .service h3 {
             color: #2b4c7e;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: 700;
         }
         
         /* Footer */
         footer {
-            background: #2b4c7e;
+            background: linear-gradient(135deg, #2b4c7e 0%, #1d3557 100%);
             color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
-        
+
+        footer h2 {
+            font-weight: 800;
+        }
+
         footer p {
             margin-bottom: 10px;
         }
-        
+
         footer a {
             color: #e8a4b8;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #f0c0d0;
         }
         
         /* Mobile */
