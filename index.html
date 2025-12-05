@@ -34,18 +34,18 @@
         /* Navigation */
         nav {
             background: #F3E5D0;
-            padding: 10px 20px;
+            padding: 15px 20px;
             position: sticky;
             top: 0;
             z-index: 100;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 80px;
+            height: 110px;
         }
 
         .nav-logo {
-            height: 70px;
+            height: 95px;
             width: auto;
         }
 
@@ -132,49 +132,38 @@
         /* Hero Section */
         .hero {
             position: relative;
-            min-height: 550px;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 20px;
+            min-height: 450px;
             background: url('hero.jpg');
             background-size: cover;
-            background-position: center top;
+            background-position: center;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60%;
-            background: linear-gradient(to top, rgba(43, 76, 126, 0.9) 0%, rgba(43, 76, 126, 0.7) 50%, transparent 100%);
+        /* CTA Section below social proof */
+        .cta-section {
+            background: #2b4c7e;
+            padding: 50px 20px;
+            text-align: center;
         }
 
-        .hero-content {
-            position: relative;
-            max-width: 800px;
+        .cta-section h1 {
             color: white;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 44px;
+            font-size: 42px;
             font-weight: 800;
             margin-bottom: 15px;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
         }
 
-        .hero p {
+        .cta-section p {
+            color: white;
             font-size: 20px;
-            margin-bottom: 25px;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            opacity: 0.95;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
             line-height: 1.6;
         }
 
-        .hero-cta {
+        .cta-section .hero-cta {
             display: flex;
             gap: 15px;
             justify-content: center;
@@ -200,15 +189,14 @@
         }
 
         .cta-button.secondary {
-            background: transparent;
-            border: 3px solid white;
-            color: white;
-            box-shadow: none;
+            background: white;
+            color: #2b4c7e;
+            box-shadow: 0 4px 15px rgba(255,255,255,0.3);
         }
 
         .cta-button.secondary:hover {
-            background: rgba(255,255,255,0.1);
-            box-shadow: 0 4px 15px rgba(255,255,255,0.2);
+            background: #f5f0e8;
+            box-shadow: 0 6px 20px rgba(255,255,255,0.4);
         }
 
         /* Social Proof Bar */
@@ -248,43 +236,6 @@
 
         .proof-item strong {
             color: #2b4c7e;
-        }
-
-        /* Services */
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            padding: 50px 20px;
-            background: #f5f0e8;
-            flex-wrap: wrap;
-        }
-
-        .service {
-            text-align: center;
-            padding: 25px 35px;
-            background: white;
-            border-radius: 20px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: default;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .service:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            font-size: 50px;
-            margin-bottom: 12px;
-            display: block;
-        }
-
-        .service h3 {
-            color: #2b4c7e;
-            font-size: 18px;
-            font-weight: 700;
         }
 
         /* Meet George Section */
@@ -595,16 +546,7 @@
         }
     </script>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Unforgettable Kids Party Entertainment</h1>
-            <p>Magic shows, giant bubbles, and balloon art that will make your child's birthday the talk of the neighborhood!</p>
-            <div class="hero-cta">
-                <a href="book.html" class="cta-button">Book Your Party</a>
-                <a href="#packages" class="cta-button secondary">View Packages</a>
-            </div>
-        </div>
-    </section>
+    <section class="hero"></section>
 
     <section class="social-proof">
         <div class="social-proof-inner">
@@ -621,18 +563,12 @@
         </div>
     </section>
 
-    <section class="services">
-        <div class="service">
-            <div class="service-icon">✨</div>
-            <h3>Magic Shows</h3>
-        </div>
-        <div class="service">
-            <div class="service-icon">🫧</div>
-            <h3>Bubble Shows</h3>
-        </div>
-        <div class="service">
-            <div class="service-icon">🎈</div>
-            <h3>Balloon Art</h3>
+    <section class="cta-section">
+        <h1>Unforgettable Kids Party Entertainment</h1>
+        <p>Magic shows, giant bubbles, and balloon art that will make your child's birthday the talk of the neighborhood!</p>
+        <div class="hero-cta">
+            <a href="book.html" class="cta-button">Book Your Party</a>
+            <a href="#packages" class="cta-button secondary">View Packages</a>
         </div>
     </section>
 
