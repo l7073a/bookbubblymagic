@@ -47,21 +47,12 @@
         .nav-brand {
             display: flex;
             align-items: center;
-            gap: 15px;
             text-decoration: none;
         }
 
         .nav-logo {
-            height: 110px;
+            height: 90px;
             width: auto;
-        }
-
-        .nav-title {
-            font-family: 'Baloo 2', cursive;
-            font-size: 32px;
-            font-weight: 800;
-            color: #2b4c7e;
-            line-height: 1.1;
         }
 
         .hamburger {
@@ -527,11 +518,7 @@
             }
 
             .nav-logo {
-                height: 80px;
-            }
-
-            .nav-title {
-                font-size: 24px;
+                height: 70px;
             }
 
             .hamburger {
@@ -601,16 +588,12 @@
         }
 
         @media (max-width: 500px) {
-            .nav-title {
-                display: none;
-            }
-
             nav {
-                height: 90px;
+                height: 70px;
             }
 
             .nav-logo {
-                height: 90px;
+                height: 60px;
             }
         }
     </style>
@@ -619,8 +602,7 @@
     <div class="nav-overlay" onclick="toggleMenu()"></div>
     <nav>
         <a href="index.html" class="nav-brand">
-            <img src="logo.png" alt="Bubbly Magic" class="nav-logo">
-            <span class="nav-title">Bubbly Magic</span>
+            <img src="logo-horizontal.jpg" alt="Bubbly Magic - Magic, Bubbles, and Balloons" class="nav-logo">
         </a>
         <div class="hamburger" onclick="toggleMenu()">
             <span></span>
