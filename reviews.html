@@ -132,7 +132,14 @@
         .video-review h3 {
             color: #2b4c7e;
             font-size: 22px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .video-review .sound-hint {
+            color: #888;
+            font-size: 14px;
+            margin-bottom: 15px;
+            font-style: normal;
         }
 
         .video-review video {
@@ -262,7 +269,8 @@
     <section class="reviews-section">
         <div class="video-review">
             <h3>Watch What Parents Are Saying</h3>
-            <video controls playsinline preload="metadata">
+            <p class="sound-hint">🔊 Tap video for sound</p>
+            <video controls playsinline autoplay muted loop>
                 <source src="jason_k_review.MOV" type="video/quicktime">
                 <source src="jason_k_review.MOV" type="video/mp4">
                 Your browser does not support the video tag.
